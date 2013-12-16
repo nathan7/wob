@@ -6,6 +6,34 @@
 
     npm install wob
 
+## Examples
+
+```js
+var fs = require('fs')
+  , Browserify = require('browserify')
+  , Stylus = require('stylus-fs')
+
+wob.createServer(function(req) {
+  if (req.url === '/index.js')
+    return Browserify(__dirname + req.url)
+  if (req.url === '/index.css')
+    return Stylus(__dirname + req.url.replace(/\.css$/, '.styl'))
+  if (req.url === '/index.html')
+    return fs.createReadStream(__dirname + req.url)
+  throw wob.status[404]
+})
+```
+
+### Passing headers
+
+```js
+wob.createServer(function(req) {
+  return stream.on('pipe', function(res) {
+    res.setHeader('Content-Type', 'x-weird/weirdness')
+  })
+})
+```
+
 ## API
 
 ### wob(function(req, res) -> Response)
