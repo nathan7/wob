@@ -14,7 +14,9 @@
 
   A promise will be resolved.
   A Stream will be piped to the response stream (`return stream` is pretty much equivalent to doing `stream.pipe(res)` in core-http)
-  Any other value will be serialised as JSON and sent as response.
+  Any other value will be serialised to JSON and sent as response.
+
+  Thrown errors are also serialised to JSON. If they have a `.statusCode` property, that'll be set as status code.
 
 ### wob.createServer(function(req, res) -> Response)
 
