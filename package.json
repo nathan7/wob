@@ -1,0 +1,24 @@
+{
+  "name": "wob",
+  "version": "1.0.0",
+  "description": "minimalist http server wrapper",
+  "main": "index.js",
+  "dependencies": {
+    "promise": "~3.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nathan7/wob.git"
+  },
+  "keywords": [
+    "web",
+    "http",
+    "server"
+  ],
+  "author": "Nathan Zadoks",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nathan7/wob/issues"
+  },
+  "homepage": "https://github.com/nathan7/wob"
+}
