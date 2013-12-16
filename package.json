@@ -1,6 +1,6 @@
 {
   "name": "wob",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "minimalist http server wrapper",
   "main": "index.js",
   "dependencies": {
