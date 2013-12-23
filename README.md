@@ -28,7 +28,7 @@ wob.createServer(function(req) {
 
 ```js
 wob.createServer(function(req) {
-  return stream.on('pipe', function(res) {
+  return stream.on('piped', function(res) {
     res.setHeader('Content-Type', 'x-weird/weirdness')
   })
 })

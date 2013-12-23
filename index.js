@@ -18,6 +18,7 @@ function wob(handler) {
 
     function output(ret) {
       if (ret instanceof Stream) {
+        ret.emit('piped', res)
         ret.pipe(res)
         return
       }
