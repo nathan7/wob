@@ -12,7 +12,7 @@ wob.createServer = function(fn) {
 function wob(handler) {
   return function(req, res) {
     Promise
-      .from(handler(req))
+      .from(handler(req, res))
       .then(null, outputError)
       .then(output)
 
